@@ -25,6 +25,11 @@ block content
                     },                   
                 ]
             each v,index in vegetables  
-                div(class="col-sm-2") #{v.name}
-                div(class="col-sm-2") #{v.color}
-                div(class="col-sm-2") #{v.weight}
+                div(class="col-sm-2" onclick=`buy(${index})`) #{v.name}
+                div(class="col-sm-2" onclick=`buy(${index})`) #{v.color}
+                div(class="col-sm-2" onclick=`buy(${index})`) #{v.weight}
+    script.                
+        function buy(intemNo)
+        {
+              alert(`you purchased Item ${intemNo+1}`)
+        }
