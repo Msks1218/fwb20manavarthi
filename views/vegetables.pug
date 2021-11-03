@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  h1= title
+  p search results for vegetables 
+  p 
+    div(class="container-fluid")
+        div(class="row")
+            -
+                let vegetables  = [
+                    {
+                        "name": "Tomato",
+                        "color": "red" ,
+                        "weight": 5
+                    },
+                    {
+                        "name": "Carrot",
+                        "color": "Orange" ,
+                        "weight": 35
+                    },
+                    {
+                        "name": "Potato",
+                        "color": "brown" ,
+                        "weight": 4
+                    },                   
+                ]
+            each v,index in vegetables  
+                div(class="col-sm-2") #{v.name}
+                div(class="col-sm-2") #{v.color}
+                div(class="col-sm-2") #{v.weight}
